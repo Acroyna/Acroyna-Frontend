@@ -1,0 +1,28 @@
+// src/components/Navbar.js
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <nav className="bg-blue-700 text-white px-6 py-4 flex justify-between items-center fixed top-0 left-0 w-full z-50 shadow-md">
+      <h1 className="text-xl font-bold">Acroyna Software Solutions</h1>
+      <button
+        onClick={() => setMenuOpen(!menuOpen)}
+        className="md:hidden focus:outline-none"
+        aria-label="Toggle menu"
+      >
+        ☰
+      </button>
+      <ul className={`md:flex gap-6 transition-all duration-300 ease-in-out ${menuOpen ? 'block' : 'hidden'} md:block`}>
+        <li className="py-2 md:py-0"><Link to="/" className="hover:text-blue-300">Home</Link></li>
+        <li className="py-2 md:py-0"><Link to="/about" className="hover:text-blue-300">About</Link></li>
+        <li className="py-2 md:py-0"><Link to="/services" className="hover:text-blue-300">Services</Link></li>
+        <li className="py-2 md:py-0"><Link to="/contact" className="hover:text-blue-300">Contact Us</Link></li>
+      </ul>
+    </nav>
+  );
+}
+
+export default Navbar;

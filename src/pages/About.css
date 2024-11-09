@@ -1,0 +1,126 @@
+/* src/pages/About.css */
+
+/* General styles for the About section */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem; /* Padding around the section */
+  background-color: #f9f9f9; /* Light background color for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Card container styles */
+.cards-container {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  gap: 1.5rem; /* Space between cards */
+}
+
+/* Individual card styles */
+.card {
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for cards */
+  padding: 1.5rem; /* Padding inside cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effect */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Card title styles */
+.card-title {
+  font-size: 1.5rem; /* Larger font size for titles */
+  color: #0937c0; /* Tailwind blue-700 */
+  margin-bottom: 1rem; /* Margin below title */
+}
+
+/* Mission Paragraph Style */
+.mission {
+  margin: 1rem 0; /* Margin for spacing */
+  font-size: 1.1rem; /* Slightly larger font size */
+  line-height: 1.5; /* Better readability */
+}
+
+/* Services List Style */
+.services-list {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+
+.services-list li {
+  margin: 0.5rem 0; /* Margin between list items */
+}
+
+/* Right Content Styles */
+.content-right {
+  flex: 0 0 300px; /* Fixed width for the right content */
+}
+
+/* CEO Image Hover Effects */
+.ceo-image {
+  width: 160px; /* Adjust size as needed */
+  height: 160px; /* Adjust size as needed */
+  border-radius: 50%; /* Circular image */
+  transition: transform 0.3s; /* Transition for scaling effect */
+}
+
+.group:hover .ceo-image {
+  transform: scale(1.05); /* Slightly scale image on hover */
+}
+
+/* LinkedIn Icon Styles */
+.linkedin-icon {
+  width: 40px; /* Size of LinkedIn icon */
+  height: 40px; /* Size of LinkedIn icon */
+  background-color: rgba(0, 123, 255, 0.8); /* Blue background */
+  border-radius: 50%; /* Circle shape */
+  padding: 5px; /* Padding around icon */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: opacity 0.3s ease; /* Smooth transition for the icon */
+}
+
+/* CEO Name and Designation */
+h4 {
+  font-size: 1.25rem; /* Adjust font size for the name */
+  margin-top: 0.5rem; /* Spacing above the name */
+  transition: text-decoration 0.3s;
+}
+
+.about-section-header{
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  text-align: center;
+  color: #091491; /* Tailwind blue-700 */
+}
+
+p {
+  color: #4a4a4a; /* Dark gray for the designation */
+  transition: text-decoration 0.3s;
+}
+
+/* Additional CSS for better logo visibility */
+.group-hover\:opacity-100 {
+  opacity: 0; /* Default opacity */
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1; /* Fully visible on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column; /* Stack content on smaller screens */
+  }
+  .content-left {
+    margin-right: 0; /* Remove right margin on small screens */
+    margin-bottom: 2rem; /* Add margin below */
+  }
+  .content-right {
+    width: 100%; /* Make right content full width */
+  }
+}

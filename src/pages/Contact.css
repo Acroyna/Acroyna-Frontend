@@ -1,0 +1,111 @@
+/* src/pages/Contact.css */
+
+/* Light Ocean Background */
+.contact-container {
+  background-color: #e0f7fa; /* Light ocean color */
+  min-height: 100vh; /* Make sure it covers the full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animated Character */
+.animated-character {
+  text-align: center;
+  flex: 1;
+}
+
+.animated-character img {
+  animation: bounce 2s infinite;
+  width: 80%; /* Adjust size as needed */
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Form Container */
+.form-container {
+  flex: 1;
+  padding: 2rem;
+  background-color: #ffffff; /* White background for form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Form Field Styles */
+.form-field {
+  margin-bottom: 1rem;
+}
+
+/* Flexbox for Pairing Fields */
+.form-field.flex {
+  display: flex;
+  justify-content: space-between; /* Space between fields */
+}
+
+/* Individual Input Styles */
+.line-input {
+  width: 100%;
+  border: none; /* Remove the boxy border */
+  border-bottom: 2px solid #00796b; /* Bottom border */
+  padding: 10px 0; /* Vertical padding */
+  outline: none; /* Remove default outline */
+  font-size: 16px; /* Font size */
+}
+
+/* Placeholder Styles */
+.line-input::placeholder {
+  color: #aaa; /* Placeholder color */
+  opacity: 1; /* Ensure placeholder is visible */
+}
+
+/* Focus State for Input Fields */
+.line-input:focus {
+  border-bottom: 2px solid #007BFF; /* Change border color on focus */
+}
+
+/* Label Styles */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold; /* Make labels bold */
+}
+
+/* Description Textarea Style */
+.form-field textarea {
+  width: 100%; /* Full width for description */
+  border: none; /* Remove boxy border */
+  border-bottom: 2px solid #00796b; /* Bottom border */
+  padding: 10px 0; /* Vertical padding */
+  outline: none; /* Remove default outline */
+  resize: none; /* Disable resizing */
+}
+
+.form-field textarea:focus {
+  border-bottom: 2px solid #007BFF; /* Change border color on focus */
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: #007BFF; /* Button color */
+  color: white; /* Text color */
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
