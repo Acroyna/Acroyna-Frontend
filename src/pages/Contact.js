@@ -1,22 +1,9 @@
-import React, { useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha'; // Import reCAPTCHA
-import bootImg from '../images/bussiness_handshake.png'; // Ensure this path is correct
+import bootImg from '../images/bussiness_handshake.png';
 import './Contact.css'; // Import the CSS file
 
 function Contact() {
-  const [captchaValue, setCaptchaValue] = useState(null); // State to hold reCAPTCHA value
-
-  const handleCaptchaChange = (value) => {
-    setCaptchaValue(value); // Store the captcha value when verified
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!captchaValue) {
-      alert("Please verify that you are not a robot.");
-      return;
-    }
-    // Handle form submission logic here
     console.log("Form submitted!");
   };
 
@@ -28,7 +15,7 @@ function Contact() {
         <img 
           src={bootImg} 
           alt="Animated Character" 
-          className="w-3/4" // Adjust size as needed
+          className="w-3/4"
         />
       </div>
 
@@ -115,14 +102,6 @@ function Contact() {
               placeholder="Describe how Acroyna can help you..."
               className="line-input"
             ></textarea>
-          </div>
-          
-          {/* Google reCAPTCHA */}
-          <div className="form-field">
-            <ReCAPTCHA
-              sitekey="YOUR_SITE_KEY" // Replace with your actual Site Key
-              onChange={handleCaptchaChange}
-            />
           </div>
 
           <button type="submit" className="submit-button">Submit</button>
