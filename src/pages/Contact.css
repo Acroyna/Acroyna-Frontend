@@ -1,26 +1,24 @@
-/* src/pages/Contact.css */
-
-/* Light Ocean Background */
 .contact-container {
-  background-color: #e0f7fa; /* Light ocean color */
-  min-height: 100vh; /* Make sure it covers the full height */
+  background-color: #e0f7fa;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
 }
 
-/* Animated Character */
 .animated-character {
   text-align: center;
   flex: 1;
+  margin: 1rem;
 }
 
 .animated-character img {
   animation: bounce 2s infinite;
-  width: 80%; /* Adjust size as needed */
+  width: 80%;
 }
 
-/* Bounce Animation */
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -33,72 +31,66 @@
   }
 }
 
-/* Form Container */
 .form-container {
   flex: 1;
   padding: 2rem;
-  background-color: #ffffff; /* White background for form */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  max-width: 500px;
 }
 
-/* Form Field Styles */
 .form-field {
   margin-bottom: 1rem;
 }
 
-/* Flexbox for Pairing Fields */
 .form-field.flex {
   display: flex;
-  justify-content: space-between; /* Space between fields */
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-/* Individual Input Styles */
 .line-input {
   width: 100%;
-  border: none; /* Remove the boxy border */
-  border-bottom: 2px solid #00796b; /* Bottom border */
-  padding: 10px 0; /* Vertical padding */
-  outline: none; /* Remove default outline */
-  font-size: 16px; /* Font size */
+  border: none;
+  border-bottom: 2px solid #00796b;
+  padding: 10px 0;
+  outline: none;
+  font-size: 16px;
 }
 
-/* Placeholder Styles */
 .line-input::placeholder {
-  color: #aaa; /* Placeholder color */
-  opacity: 1; /* Ensure placeholder is visible */
+  color: #aaa;
+  opacity: 1;
 }
 
-/* Focus State for Input Fields */
 .line-input:focus {
-  border-bottom: 2px solid #007BFF; /* Change border color on focus */
+  border-bottom: 2px solid #007BFF;
 }
 
-/* Label Styles */
 label {
   display: block;
   margin-bottom: 0.5rem;
-  font-weight: bold; /* Make labels bold */
+  font-weight: bold;
 }
 
-/* Description Textarea Style */
 .form-field textarea {
-  width: 100%; /* Full width for description */
-  border: none; /* Remove boxy border */
-  border-bottom: 2px solid #00796b; /* Bottom border */
-  padding: 10px 0; /* Vertical padding */
-  outline: none; /* Remove default outline */
-  resize: none; /* Disable resizing */
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #00796b;
+  padding: 10px 0;
+  outline: none;
+  resize: none;
 }
 
 .form-field textarea:focus {
-  border-bottom: 2px solid #007BFF; /* Change border color on focus */
+  border-bottom: 2px solid #007BFF;
 }
 
-/* Submit Button */
 .submit-button {
-  background-color: #007BFF; /* Button color */
-  color: white; /* Text color */
+  background-color: #007BFF;
+  color: white;
   padding: 0.75rem;
   border: none;
   border-radius: 4px;
@@ -107,5 +99,5 @@ label {
 }
 
 .submit-button:hover {
-  background-color: #0056b3; /* Darker color on hover */
+  background-color: #0056b3;
 }
